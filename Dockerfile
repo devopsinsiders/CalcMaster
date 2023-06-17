@@ -15,6 +15,9 @@ COPY . .
 # Build the React application
 RUN npm run build
 
+RUN cd ./build
+RUN ls
+
 # Stage 2: Serve the built React application using Nginx
 FROM nginx
 
